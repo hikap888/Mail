@@ -9,7 +9,7 @@ interface Props {
   onChange: (v: any) => void;
 }
 
-export function PhoneInput({ id, name, label, placeholder, value, onChange }: Props) {
+export default function PhoneInput({ id, name, label, placeholder, value, onChange }: Props) {
   return (<div className="rounded-md pt-5 pb-5 px-5 border border-light-75 shadow mb-20">
     <label className="w-full text-10 text-light-500 font-medium px-15 inline-block">
       {label}

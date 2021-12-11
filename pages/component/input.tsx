@@ -10,7 +10,7 @@ interface Props {
   onChange: (v: any) => void;
 }
 
-export function Input({ id, name, type, label, placeholder, value, onChange }: Props) {
+export default function Input({ id, name, type, label, placeholder, value, onChange }: Props) {
   return (<div className="min-w-full rounded-md pt-5 pb-5 py-5 border border-light-75 shadow mb-10">
     <label className="w-full text-10 text-light-500 font-medium px-5 inline-block">
       {label}
