@@ -10,6 +10,9 @@ module.exports = {
       'md': '1024px',
       'lg': '1280px',
     },
+    fontFamily: {
+      serif: ["Times New Roman"],
+    },
     extend: {},
   },
   variants: {

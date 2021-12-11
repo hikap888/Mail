@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         {<link rel="icon" href="FirstLogo.png" />}
       </Head>
       <main className="w-full h-screen flex justify-center items-center">
-        <Image src="/FirstLogo.png" alt="ssanctus" width={350} height={227} />
+        <Image src="/FirstLogo.png" alt="ssanctus" width={280} height={181} />
       </main >
     </div >
   )

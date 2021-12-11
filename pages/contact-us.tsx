@@ -77,13 +77,13 @@ const ContactUs: NextPage = () => {
             <div className="w-1/3 msm:w-auto mmd:w-auto mlg:w-auto">
               <div className="text-center"><Image src="/Logo.png" alt="ssanctus" width={300} height={100} /></div>
               <div className="border min-w-min px-4 py-10">
-                <p className="text-center font-family: Segoe UI text-3xl pb-12 mb-8 border-b-4 border-black">To -be, innovative, influential. S.Sanctus is representing fashion under a new vision</p>
+                <p className="text-center font-serif text-3xl pb-12 mb-8 border-b-4 border-black">To -be, innovative, influential. S.Sanctus is representing fashion under a new vision</p>
                 <form className="md:min-w-3/5 mx-auto" onSubmit={form.handleSubmit}>
                   <Input name="fullName" placeholder="Walter White" label="Full Name" value={form.values.fullName} onChange={form.handleChange} />
                   <Input type="email" name="email" placeholder="someone@example.com" value={form.values.email} label="Email Address" onChange={form.handleChange} />
                   <PhoneInput name="phone" placeholder="(+000)(123) 456 7890" label="Phone Number" value={form.values.phone} onChange={form.handleChange} />
                   <div className="flex justify-center pt-30">
-                    <button className="btn btn-warning btn-md bg-green-400 px-10 py-5 rounded-lg font-extrabold text-2xl" type="submit" disabled={!(form.isValid && form.dirty)}>Join US</button>
+                    <button className="btn btn-warning btn-md bg-black px-10 py-5 rounded-lg font-extrabold text-2xl text-white" type="submit" disabled={!(form.isValid && form.dirty)}>Join US</button>
                   </div>
                 </form>
               </div>
