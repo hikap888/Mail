@@ -75,17 +75,18 @@ const ContactUs: NextPage = () => {
           <div className="flex msm:flex-col md:flex-row md:justify-around msm:justify-center md:items-center w-auto">
             <div className="flex justify-center w-1/3 msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/leftSide.png" alt="ssanctus" width={375} height={600} /></div>
             <div className="w-1/3 msm:w-auto mmd:w-auto mlg:w-auto">
-              <div className="text-center"><Image src="/Logo.png" alt="ssanctus" width={300} height={72} /></div>
-              <div className="border min-w-min px-4 py-10">
+              <div className="text-center mb-4"><Image src="/Logo.png" alt="ssanctus" width={300} height={72} /></div>
+              <div className="border min-w-min px-4 py-5">
                 <p className="text-center font-serif text-3xl pb-12 mb-8 border-b-4 border-black">To be, innovative, influential. S.Sanctus is representing fashion under a new vision</p>
                 <form className="md:min-w-3/5 mx-auto" onSubmit={form.handleSubmit}>
                   <Input name="fullName" placeholder="Walter White" label="Full Name" value={form.values.fullName} onChange={form.handleChange} />
                   <Input type="email" name="email" placeholder="someone@example.com" value={form.values.email} label="Email Address" onChange={form.handleChange} />
                   <PhoneInput name="phone" placeholder="(+000)(123) 456 7890" label="Phone Number" value={form.values.phone} onChange={form.handleChange} />
-                  <div className="flex justify-center pt-30">
+                  <div className="flex justify-center">
                     <button className="btn btn-warning btn-md bg-black px-10 py-5 rounded-lg font-extrabold text-2xl text-white" type="submit" disabled={!(form.isValid && form.dirty)}>Join US</button>
                   </div>
                 </form>
+                <p className="text-center font-serif text-base text-gray-500 mt-6">By signing up below, you agree to stay in touch with S☨Sanctus. We will use your personal information to provide you updates on our official launch</p>
               </div>
             </div>
             <div className="flex justify-center msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/rightSide.png" alt="ssanctus" width={375} height={600} /></div>
