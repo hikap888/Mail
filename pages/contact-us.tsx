@@ -77,7 +77,7 @@ const ContactUs: NextPage = () => {
             <div className="w-1/3 msm:w-auto mmd:w-auto mlg:w-auto">
               <div className="text-center mb-4"><Image src="/Logo.png" alt="ssanctus" width={300} height={72} /></div>
               <div className="border min-w-min px-4 py-5">
-                <p className="text-center font-serif text-3xl pb-12 mb-8 border-b-4 border-black">To be, innovative, influential. S.Sanctus is representing fashion under a new vision</p>
+                <p className="text-center font-serif text-3xl pb-12 mb-8 border-b-4 border-black">To-Be, innovative, influential. S.Sanctus is representing fashion under a new vision</p>
                 <form className="md:min-w-3/5 mx-auto" onSubmit={form.handleSubmit}>
                   <Input name="fullName" placeholder="Walter White" label="Full Name" value={form.values.fullName} onChange={form.handleChange} />
                   <Input type="email" name="email" placeholder="someone@example.com" value={form.values.email} label="Email Address" onChange={form.handleChange} />
