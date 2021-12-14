@@ -86,7 +86,7 @@ const ContactUs: NextPage = () => {
                     <button className="btn btn-warning btn-md bg-black px-10 py-5 rounded-lg font-extrabold text-2xl text-white" type="submit" disabled={!(form.isValid && form.dirty)}>Join US</button>
                   </div>
                 </form>
-                <p className="text-center font-serif text-base text-gray-500 mt-6">By signing up below, you agree to stay in touch with S☨Sanctus. We will use your personal information to provide you updates on our official launch</p>
+                <p className="text-center font-serif text-base text-gray-500 mt-6">By signing up below, you agree to stay in touch with S.Sanctus. We will use your personal information to provide you updates on our official launch.</p>
               </div>
             </div>
             <div className="flex justify-center msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/rightSide.png" alt="ssanctus" width={375} height={600} /></div>
