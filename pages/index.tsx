@@ -13,12 +13,12 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title></title>
+        <title>S.Sanctus</title>
         <meta name="description" content="S.Sanctus" />
         {<link rel="icon" href="FirstLogo.png" />}
       </Head>
       <main className="w-full h-screen flex justify-center items-center">
-        <Image src="/FirstLogo.png" alt="ssanctus" width={280} height={181} />
+        <Image src="/FirstLogo.png" alt="ssanctus" width={270} height={175} />
       </main >
     </div >
   )
