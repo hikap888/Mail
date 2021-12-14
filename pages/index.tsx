@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title></title>
         <meta name="description" content="S.Sanctus" />
         {<link rel="icon" href="FirstLogo.png" />}
       </Head>
