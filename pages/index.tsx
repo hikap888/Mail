@@ -24,6 +24,10 @@ const Home: NextPage = () => {
   useEffect(() => {
     setTimeout(() => {
       console.log('set fading')
+      const element = document.getElementById("main")
+      if (element) {
+        element.scrollIntoView()
+      }
       setFade(true)
     }, 2000)
   }, [])
@@ -90,7 +94,7 @@ const Home: NextPage = () => {
               <div className="container mx-auto">
                 <div className="flex msm:flex-col md:flex-row md:justify-around msm:justify-center md:items-center w-auto">
                   <div className="flex justify-center w-1/3 msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/leftSide.png" alt="ssanctus" width={375} height={600} /></div>
-                  <div className="w-1/3 msm:w-auto mmd:w-auto mlg:w-auto">
+                  <div id="main" className="w-1/3 msm:w-auto mmd:w-auto mlg:w-auto">
                     <div className="text-center mb-4"><Image src="/Logo.png" alt="ssanctus" width={300} height={72} /></div>
                     <div className="border min-w-min px-4 py-5">
                       <p className="text-center font-serif text-3xl pb-12 mb-8 border-b-4 border-black">To-Be, innovative, influential. S.Sanctus is representing fashion under a new vision</p>
