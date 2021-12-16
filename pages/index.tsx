@@ -45,18 +45,17 @@ const Home: NextPage = () => {
     },
     validationSchema: schema,
     onSubmit: async values => {
-      console.log('summbite');
       const data: DataProps = {
         name: values.fullName,
         email: values.email,
         phone: values.phone
       }
+
+
       handleSubmit(data);
     },
   });
-
   const handleSubmit = (data: DataProps) => {
-    console.log('data == ', data)
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -67,7 +66,7 @@ const Home: NextPage = () => {
     }).then((res) => {
       console.log('Response received')
       if (res.status === 200) {
-        console.log('Response succeeded!')
+        console.log('Response succeeded!');
         setSubmitted(true)
         setName('')
         setEmail('')
@@ -85,7 +84,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="relative w-screen h-screen">
         <div className={`absolute left-0 top-0 bg-white w-full h-screen flex justify-center items-center transition-opacity duration-1000 ${fade ? 'opacity-0' : 'opacity-100'}`}>
-          <Image src="/FirstLogo.png" alt="ssanctus" width={250} height={195} />
+          <Image src="/FirstLogo.png" alt="ssanctus" width={250} height={195} priority />
         </div>
 
         <div className={`absolute left-0 top-0 w-full h-full bg-white transition-opacity duration-1000 ${fade ? 'opacity-100' : 'opacity-0'}`}>
