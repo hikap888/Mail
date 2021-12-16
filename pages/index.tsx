@@ -83,7 +83,7 @@ const Home: NextPage = () => {
         {<link rel="icon" href="FirstLogo.png" />}
       </Head>
       <div className="relative w-full h-full">
-        <div className={`fixed left-0 -top-10 bg-white w-full h-screen flex justify-center items-center transition-opacity duration-1000 ${fade ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`fixed left-0 -top-12 bg-white w-full h-screen flex justify-center items-center transition-opacity duration-1000 ${fade ? 'opacity-0' : 'opacity-100'}`}>
           <Image src="/FirstLogo.png" alt="ssanctus" width={250} height={195} priority />
         </div>
 
