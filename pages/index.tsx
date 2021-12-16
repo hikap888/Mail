@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         element.scrollIntoView()
       }
       setFade(true)
-    }, 2000)
+    }, 3000)
   }, [])
 
   const schema = Yup.object().shape({
@@ -82,8 +82,8 @@ const Home: NextPage = () => {
         <meta name="description" content="S.Sanctus" />
         {<link rel="icon" href="FirstLogo.png" />}
       </Head>
-      <div className="relative w-screen h-screen">
-        <div className={`absolute left-0 top-0 bg-white w-full h-screen flex justify-center items-center transition-opacity duration-1000 ${fade ? 'opacity-0' : 'opacity-100'}`}>
+      <div className="relative w-full h-full">
+        <div className={`fixed left-0 top-0 bg-white w-full h-screen flex justify-center items-center transition-opacity duration-1000 ${fade ? 'opacity-0' : 'opacity-100'}`}>
           <Image src="/FirstLogo.png" alt="ssanctus" width={250} height={195} priority />
         </div>
 
