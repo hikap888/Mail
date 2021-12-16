@@ -92,7 +92,7 @@ const Home: NextPage = () => {
             <section className="">
               <div className="container mx-auto">
                 <div className="flex msm:flex-col md:flex-row md:justify-around msm:justify-center md:items-center w-auto">
-                  <div className="flex justify-center w-1/3 msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/leftSide.png" alt="ssanctus" width={375} height={600} /></div>
+                  <div className="flex justify-center w-1/3 msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/leftSide.png" alt="ssanctus" width={1000} height={1600} /></div>
                   <div id="main" className="w-1/3 msm:w-auto mmd:w-auto mlg:w-auto">
                     <div className="text-center mb-4"><Image src="/Logo.png" alt="ssanctus" width={300} height={72} /></div>
                     <div className="border min-w-min px-4 py-5">
@@ -108,7 +108,7 @@ const Home: NextPage = () => {
                       <p className="text-center font-serif text-base text-gray-500 mt-6">By signing up above, you agree to stay in touch with S.Sanctus. We will use your personal information to provide you updates on our official launch.</p>
                     </div>
                   </div>
-                  <div className="flex justify-center msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/rightSide.png" alt="ssanctus" width={375} height={600} /></div>
+                  <div className="flex justify-center msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/rightSide.png" alt="ssanctus" width={1000} height={1600} /></div>
                 </div>
               </div>
             </section>
