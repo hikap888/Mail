@@ -84,8 +84,8 @@ const Home: NextPage = () => {
         {<link rel="icon" href="FirstLogo.png" />}
       </Head>
       <div className="relative w-screen h-screen">
-        <div className={`absolute left-0 top-0 bg-white w-full h-full flex justify-center items-center transition-opacity duration-1000 ${fade ? 'opacity-0' : 'opacity-100'}`}>
-          <Image src="/FirstLogo.png" alt="ssanctus" width={270} height={175} />
+        <div className={`absolute left-0 top-0 bg-white w-full h-screen flex justify-center items-center transition-opacity duration-1000 ${fade ? 'opacity-0' : 'opacity-100'}`}>
+          <Image src="/FirstLogo.png" alt="ssanctus" width={250} height={195} />
         </div>
 
         <div className={`absolute left-0 top-0 w-full h-full bg-white transition-opacity duration-1000 ${fade ? 'opacity-100' : 'opacity-0'}`}>
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
                           <button className="btn btn-warning btn-md bg-black px-10 py-5 rounded-lg font-extrabold text-2xl text-white" type="submit" disabled={!(form.isValid && form.dirty)}>Join US</button>
                         </div>
                       </form>
-                      <p className="text-center font-serif text-base text-gray-500 mt-6">By signing up below, you agree to stay in touch with S.Sanctus. We will use your personal information to provide you updates on our official launch.</p>
+                      <p className="text-center font-serif text-base text-gray-500 mt-6">By signing up above, you agree to stay in touch with S.Sanctus. We will use your personal information to provide you updates on our official launch.</p>
                     </div>
                   </div>
                   <div className="flex justify-center msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/rightSide.png" alt="ssanctus" width={375} height={600} /></div>
