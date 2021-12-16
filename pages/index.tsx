@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         element.scrollIntoView()
       }
       setFade(true)
-    }, 3000)
+    }, 2000)
   }, [])
 
   const schema = Yup.object().shape({
@@ -64,7 +64,6 @@ const Home: NextPage = () => {
       },
       body: JSON.stringify(data)
     }).then((res) => {
-      console.log('Response received')
       if (res.status === 200) {
         console.log('Response succeeded!');
         setSubmitted(true)
