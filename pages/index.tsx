@@ -4,6 +4,7 @@ import Layout from './component/layout/layout'
 import Input from './component/input'
 import PhoneInput from './component/phone-input'
 import Image from 'next/image'
+import { Spinner } from './Spinner/Spinner';
 import { useState, useRef, useEffect } from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -20,7 +21,7 @@ const Home: NextPage = () => {
   const [phone, setPhone] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [fade, setFade] = useState(false)
-
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       console.log('set fading')
@@ -55,7 +56,11 @@ const Home: NextPage = () => {
       handleSubmit(data);
     },
   });
+  const alertShow = (data: DataProps) => {
+
+  }
   const handleSubmit = (data: DataProps) => {
+    setIsLoading(true)
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -65,12 +70,16 @@ const Home: NextPage = () => {
       body: JSON.stringify(data)
     }).then((res) => {
       if (res.status === 200) {
+
+        alert("Hi." + data.name + "Congratulations to Join Our S.Sanctus!")
+        setIsLoading(false);
         console.log('Response succeeded!');
         setSubmitted(true)
         setName('')
         setEmail('')
         setPhone('')
       }
+
     })
   }
 
@@ -101,7 +110,7 @@ const Home: NextPage = () => {
                         <Input type="email" name="email" placeholder="someone@example.com" value={form.values.email} label="Email Address" onChange={form.handleChange} />
                         <PhoneInput name="phone" placeholder="(+000)(123) 456 7890" label="Phone Number" value={form.values.phone} onChange={form.handleChange} />
                         <div className="flex justify-center">
-                          <button className="btn btn-warning btn-md bg-black px-10 py-5 rounded-lg font-extrabold text-2xl text-white" type="submit" disabled={!(form.isValid && form.dirty)}>Join US</button>
+                          <button className={`${isLoading ? "opacity-50 cursor-wait" : ""} btn btn-warning btn-md bg-black px-10 py-5 rounded-lg font-extrabold text-2xl text-white`} type="submit" disabled={!(form.isValid && form.dirty) && isLoading}>Join US</button>
                         </div>
                       </form>
                       <p className="text-center font-serif text-base text-gray-500 mt-6">By signing up above, you agree to stay in touch with S.Sanctus. We will use your personal information to provide you updates on our official launch.</p>
