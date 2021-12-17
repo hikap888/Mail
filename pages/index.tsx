@@ -4,7 +4,6 @@ import Layout from './component/layout/layout'
 import Input from './component/input'
 import PhoneInput from './component/phone-input'
 import Image from 'next/image'
-import { Spinner } from './Spinner/Spinner';
 import { useState, useRef, useEffect } from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';

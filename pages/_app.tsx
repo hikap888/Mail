@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import '../styles/Spinner.css'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
