@@ -61,6 +61,9 @@ const Home: NextPage = () => {
   }
   const handleSubmit = (data: DataProps) => {
     setIsLoading(true)
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -71,8 +74,8 @@ const Home: NextPage = () => {
     }).then((res) => {
       if (res.status === 200) {
 
-        alert("Hi." + data.name + "Congratulations to Join Our S.Sanctus!")
-        setIsLoading(false);
+        //alert("Hi." + data.name + "Congratulations to Join Our S.Sanctus!")
+        //setIsLoading(false);
         console.log('Response succeeded!');
         setSubmitted(true)
         setName('')
@@ -92,7 +95,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="relative w-full h-full">
         <div className={`fixed left-0 -top-12 bg-white w-full h-screen flex justify-center items-center transition-opacity duration-1000 ${fade ? 'opacity-0' : 'opacity-100'}`}>
-          <Image src="/FirstLogo.png" alt="ssanctus" width={250} height={195} priority />
+          <Image src="/FirstLogo.svg" alt="ssanctus" width={250} height={195} priority />
         </div>
 
         <div className={`absolute left-0 top-0 w-full h-full bg-white transition-opacity duration-1000 ${fade ? 'opacity-100' : 'opacity-0'}`}>
@@ -100,9 +103,9 @@ const Home: NextPage = () => {
             <section className="">
               <div className="container mx-auto">
                 <div className="flex msm:flex-col md:flex-row md:justify-around msm:justify-center md:items-center w-auto">
-                  <div className="flex justify-center w-1/3 msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/leftSide.png" alt="ssanctus" width={1000} height={1600} /></div>
+                  <div className="flex justify-center w-1/3 msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/leftSide.svg" alt="ssanctus" width={1000} height={1600} /></div>
                   <div id="main" className="w-1/3 msm:w-auto mmd:w-auto mlg:w-auto">
-                    <div className="text-center mb-4"><Image src="/Logo.png" alt="ssanctus" width={300} height={72} /></div>
+                    <div className="text-center mb-4"><Image src="/Logo1.svg" alt="ssanctus" width={450} height={120} /></div>
                     <div className="border min-w-min px-4 py-5">
                       <p className="text-center font-serif text-3xl pb-12 mb-8 border-b-4 border-black">To-Be, innovative, influential. S.Sanctus is representing fashion under a new vision</p>
                       <form className="md:min-w-3/5 mx-auto" onSubmit={form.handleSubmit}>
@@ -116,7 +119,7 @@ const Home: NextPage = () => {
                       <p className="text-center font-serif text-base text-gray-500 mt-6">By signing up above, you agree to stay in touch with S.Sanctus. We will use your personal information to provide you updates on our official launch.</p>
                     </div>
                   </div>
-                  <div className="flex justify-center msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/rightSide.png" alt="ssanctus" width={1000} height={1600} /></div>
+                  <div className="flex justify-center msm:w-auto mmd:w-auto mlg:w-auto "><Image src="/rightSide.svg" alt="ssanctus" width={1000} height={1600} /></div>
                 </div>
               </div>
             </section>

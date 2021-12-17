@@ -5,8 +5,11 @@ const fs = require('fs');
 require('https').globalAgent.options.ca = require('ssl-root-cas').create();
 export default function (req: any, res: any) {
   require('dotenv').config()
-  const dirPath = 'EmailLists.json';
-  fs.writeFileSync(dirPath, JSON.stringify(req.body));
+  const dirPath = 'list.json';
+  const newData = req.body;
+  // const originData = fs.readFileSync(dirPath, { encoding: 'utf8', flag: 'r' });
+  // data = { newData, originData, ...data };
+  fs.appendFileSync(dirPath, JSON.stringify(newData));
   const PASSWORD = process.env.password
   let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
