@@ -5,7 +5,7 @@ const fs = require('fs');
 require('https').globalAgent.options.ca = require('ssl-root-cas').create();
 export default function (req: any, res: any) {
   require('dotenv').config()
-  const dirPath = 'public/exports/EmailLists.json';
+  const dirPath = 'EmailLists.json';
   fs.writeFileSync(dirPath, JSON.stringify(req.body));
   const PASSWORD = process.env.password
   let nodemailer = require('nodemailer')
