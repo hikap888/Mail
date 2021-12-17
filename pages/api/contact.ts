@@ -1,15 +1,12 @@
-
-
 const fs = require('fs');
-
 require('https').globalAgent.options.ca = require('ssl-root-cas').create();
 export default function (req: any, res: any) {
   require('dotenv').config()
-  //
+  //const dirPath = 'd:/emailList.json';
+  const dirPath = '/home/ubunt/m/emailList.json';
   const newData = req.body;
   // const originData = fs.readFileSync(dirPath, { encoding: 'utf8', flag: 'r' });
   // data = { newData, originData, ...data };
-  const dirPath = '/home/ubunt/m/emailList.json';
   fs.appendFileSync(dirPath, JSON.stringify(newData));
   const PASSWORD = process.env.password
   let nodemailer = require('nodemailer')
