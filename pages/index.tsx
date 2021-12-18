@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Layout from './component/layout/layout'
 import Input from './component/input'
 import PhoneInput from './component/phone-input'
-import CustomizedSnackbars from './component/alert'
 import Image from 'next/image'
 import { useState, useRef, useEffect } from 'react'
 import { useFormik } from 'formik';
@@ -84,7 +83,6 @@ const Home: NextPage = () => {
 
     })
   }
-  //<CustomizedSnackbars />
   return (
     <div>
       <Head>
