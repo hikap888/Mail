@@ -21,7 +21,6 @@ const Home: NextPage = () => {
   const [submitted, setSubmitted] = useState(false)
   const [fade, setFade] = useState(false)
   const [isLoading, setIsLoading] = useState(false);
-  const [open, setOpen] = useState(false)
   useEffect(() => {
     setTimeout(() => {
       console.log('set fading')
@@ -59,10 +58,9 @@ const Home: NextPage = () => {
 
   const handleSubmit = (data: DataProps) => {
     setIsLoading(true)
-    setOpen(true)
     setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 2000);
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -72,8 +70,7 @@ const Home: NextPage = () => {
       body: JSON.stringify(data)
     }).then((res) => {
       if (res.status === 200) {
-
-        alert("Hi." + data.name + "Congratulations to Join Our S.Sanctus!")
+        alert("Hi." + data.name + "I welcome you to S.Sanctus, The future of luxury.")
         console.log('Response succeeded!');
         setSubmitted(true)
         setName('')
