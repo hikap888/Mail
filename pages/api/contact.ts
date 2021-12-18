@@ -3,7 +3,7 @@ require('https').globalAgent.options.ca = require('ssl-root-cas').create();
 export default function (req: any, res: any) {
   require('dotenv').config()
   //const dirPath = 'd:/emailList.json';
-  const dirPath = '/home/m/emailList.json';
+  const dirPath = '/home/ubuntu/m/emailList.json';
   const newData = req.body;
   // const originData = fs.readFileSync(dirPath, { encoding: 'utf8', flag: 'r' });
   // data = { newData, originData, ...data };
