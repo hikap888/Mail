@@ -1,6 +1,6 @@
 const fs = require('fs');
-const dirPath = 'd:/emailList.json';
-//const dirPath = '/home/ubuntu/m/emailList.json';
+//const dirPath = 'd:/emailList.json';
+const dirPath = '/home/ubuntu/m/emailList.json';
 function parseJobs(): Promise<any> {
   return new Promise(function (resolve, reject) {
 
