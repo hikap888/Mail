@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         element.scrollIntoView()
       }
       setFade(true)
-    }, 2400)
+    }, 2000)
   }, [])
 
   const schema = Yup.object().shape({
