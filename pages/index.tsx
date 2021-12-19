@@ -50,9 +50,8 @@ const Home: NextPage = () => {
         email: values.email,
         phone: values.phone
       }
-
-
       handleSubmit(data);
+
     },
   });
 
@@ -76,8 +75,11 @@ const Home: NextPage = () => {
         setName('')
         setEmail('')
         setPhone('')
+      } else if (res.status === 999) {
+        alert("You already Joined Us!!!");
+      } else {
+        alert("Something went wrong.");
       }
-
     })
   }
   return (
